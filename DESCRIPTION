@@ -1,0 +1,10 @@
+Package: Rspotify
+Type: Package
+Title: Access to Spotify API via R
+Version: 0.1.0
+Author: Tiago Dantas <t.mendesdantas@gmail.com>
+Maintainer: Tiago Dantas <t.mendesdantas@gmail.com>
+Description: Provides an interface to the Spotify API.
+License: GPL-2
+LazyData: TRUE
+RoxygenNote: 5.0.1
