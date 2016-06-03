@@ -1,0 +1,17 @@
+# Rspotify
+
+This package allows R to access Spotify's API to interact with their data.
+
+Please access https://developer.spotify.com/web-api/
+to get access to the API to receive your app_id and app_secret ensure the REDIRECT URI includes the trailing / e.g. http://localhost:1410/
+
+## Getting Started
+
+To install from github, please install the devtools package and and then run devtools::install_github("tiagomendesdantas/Rspotify")
+
+### Importante Note
+
+Be aware that this package is its very initial phase. Use with caution.
+
+
+
