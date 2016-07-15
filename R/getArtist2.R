@@ -17,10 +17,9 @@ getArtist<-function(id){
   req <- httr::GET(paste0("https://api.spotify.com/v1/artists/",id))
   json1<-httr::content(req)
   dados<-data.frame(id=json1$id,name=json1$name,
-                   popularity=json1$popularity,
-                   followers=json1$followers$total,
-                   genres=paste(json1$genres,collapse =";"))
+                    popularity=json1$popularity,
+                    followers=json1$followers$total,
+                    genres=paste(json1$genres,collapse =";"))
   return(dados)
 }
-
 
