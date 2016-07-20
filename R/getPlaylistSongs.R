@@ -16,6 +16,7 @@ getPlaylistSongs<-function(ownerid,playlistid,offset=0,token){
   tracks<-unlist(json2$track$name)
   popularity<-unlist(json2$track$popularity)
   id<-unlist(json2$track$id)
+  artist<-unlist(lapply(seq(1:length(tracks)), function (x){return(data.frame(json2$track$artists[x])$name[1])}))
   album<-unlist(json2$track$album$name)
   playlistSongs<-data.frame(tracks,id,popularity,album,stringsAsFactors = F)
   return(playlistSongs)
