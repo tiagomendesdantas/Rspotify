@@ -15,7 +15,8 @@ getPlaylistSongs<-function(ownerid,playlistid,offset=0,token){
   json2<-jsonlite::fromJSON(jsonlite::toJSON(json1))$items
   tracks<-unlist(json2$track$name)
   popularity<-unlist(json2$track$popularity)
+  id<-unlist(json2$track$id)
   album<-unlist(json2$track$album$name)
-  playlistSongs<-data.frame(tracks,popularity,album,stringsAsFactors = F)
+  playlistSongs<-data.frame(tracks,id,popularity,album,stringsAsFactors = F)
   return(playlistSongs)
 }
