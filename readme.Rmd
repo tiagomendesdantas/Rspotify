@@ -1,13 +1,7 @@
 ---
 title: "Rspotify: Access to Spotify API via R"
-output: html_document
 ---
 
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 This package allows you to connect R to Spotify's API and get information about Songs, Albuns, Artists and Users.
 
