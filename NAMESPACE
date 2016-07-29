@@ -3,6 +3,7 @@
 export(getAlbum)
 export(getAlbuns)
 export(getArtist)
+export(getArtistinfo)
 export(getFeatures)
 export(getPlaylist)
 export(getPlaylistSongs)
