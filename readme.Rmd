@@ -1,6 +1,4 @@
----
-title: "Rspotify: Access to Spotify API via R"
----
+#Rspotify: Access to Spotify API via R
 
 
 This package allows you to connect R to Spotify's API and get information about Songs, Albuns, Artists and Users.
