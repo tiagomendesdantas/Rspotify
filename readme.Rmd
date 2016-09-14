@@ -103,15 +103,6 @@ To get the songs from a specific playlist:
 ```r
 #E.g. getting the songs from "Top 100 tracks currently on Spotify" playlist
 topsongs <- getPlaylistSongs("spotify","4hOKQuZbraPDIfaGbM3lKI",token=keys)
-topsongs[1:5,]
-
-#                                tracks                     id popularity            artist               artistId               album  
-#1                                Closer 7BKLCZ1jbUBVqRi2FVlTVw        100  The Chainsmokers 69GGBxA162lTqCwzJG5jLp              Closer
-#2 Cold Water (feat. Justin Bieber & MØ) 6DNtNfH8hXkqOX1sjqmI7p         94       Major Lazer 738wLrAtLtCtFOLvQBXOXp          Cold Water 
-#3                       Let Me Love You 4pdPtRcBmOSQDlJ3Fk945m         95          DJ Snake 540vIaP2JwjQb9dm3aArA4              Encore
-#4                              Heathens 6i0V12jOa3mr6uu4WYhUBr         95 Twenty One Pilots 3YQKmKGau1PzlVlkL1iodx            Heathens
-#5                             One Dance 1xznGGDReH1oQq0xzbwXa3         94             Drake 3TVXtAsR1Inumwj472S9r4               Views
-                                
 ```
 
 
@@ -146,5 +137,18 @@ related
 ```
 
 
+##Nice examples
 
+One nice idea is to create networks of related artists. Eg. This is a network of related artists from the top 100 artists at spotify (Basically all you need to do is use getPlaylistSongs and getRelated to get the data).
+
+<center><img src="Top100songs.pdf" alt="Top 100 network" style="width: 750px;"/></center>
+
+
+Another example is to use getFeatures to extract features and play with that. In this example I use getFeatures and getPlaylistSongs to extract song features from the "What we saw from the cheap seats" from Regina Spector and the song features from the Top 20 songs at spotify (extracted in august 2016). I assume that Reginas' songs are not very similar to the ones that make a lot of success...This is sad because her songs are awesome =( . Then I use Hierarchical cluster to see if Reginas' songs would stay in a different cluster based on its features.
+
+<center><img src="test.jpeg" alt="Regi" style="width: 750px;"/></center>
+
+Apparently it does! 8 out 11 of her songs would be in the same cluster (cluster on the right). From the 3 "misclassified" 2 were singles ("Don't Leave Me [Ne Me Quitte Pas]" and "All the Rowboats"). So it is not strange to see them in a cluster with the top 20 songs.
+
+Thats it! Hope you find this useful!
 
