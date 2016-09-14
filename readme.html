@@ -164,10 +164,24 @@ regina.whatwesaw&lt;-getAlbum(&quot;3Etyu2JmgiQTQztLz6RxDX&quot;) #&quot;3Etyu2J
 <p>To get the features from a specific song:</p>
 <pre class="r"><code># getting the song features from &quot;Don't Leave Me [Ne Me Quitte Pas]&quot; 
 #from the album &quot;what we saw from the cheap seats&quot; from Regina Spektor
-song&lt;-getFeatures(&quot;0y5HWbAnJ6qrjeBuFL52hO&quot;,token=keys) #&quot;0y5HWbAnJ6qrjeBuFL52hO&quot; is the id for the album.
-song</code></pre>
+song&lt;-getFeatures(&quot;0y5HWbAnJ6qrjeBuFL52hO&quot;,token=keys) #&quot;0y5HWbAnJ6qrjeBuFL52hO&quot; is the id for the album.</code></pre>
+<p>To get the playlists from a specific user:</p>
+<pre class="r"><code>wh.playlist &lt;- getPlaylist(&quot;thewhitehouse&quot;,token=keys) #playlist from the White House
+wh.playlist
+#id                                                              name       ownerid  tracks
+#1 6ujhXmg8SXjdkdCZ2TchTY            The Bidens' 2016 Summer Playlist thewhitehouse      15
+#2 2Zve7PqFSlGl0ojgGnhFTm   The President's 2016 Summer Playlist: Day thewhitehouse      17
+#3 0BczR7bDaoKvn3MGPxS9Lx The President's 2016 Summer Playlist: Night thewhitehouse      18
+#4 4FDHBIdHPNHCPBqftDc3lk                    Holidays with the Bidens thewhitehouse      17
+#5 4qu9a0vwTMyTPpc2YI1GPw                    Holidays with the Obamas thewhitehouse      14
+#6 3R2DGCLfGdVqqqN6rdQYr5   The First Lady's Day of the Girl Playlist thewhitehouse      20
+#7 4RGLH5YuS6ldp7aCKaTWas        The President's Summer Playlist: Day thewhitehouse      20
+#8 3fAriv8eMWELCwbWrhMKy2      The President's Summer Playlist: Night thewhitehouse      20
+
+
+</code></pre>
 <p>To get the songs from a specific playlist:</p>
-<pre class="r"><code>#E.g. getting the songs from &quot;Top 100 tracks currently on Spotify&quot;
+<pre class="r"><code>#E.g. getting the songs from &quot;Top 100 tracks currently on Spotify&quot; playlist
 topsongs &lt;- getPlaylistSongs(&quot;spotify&quot;,&quot;4hOKQuZbraPDIfaGbM3lKI&quot;,token=keys)
 topsongs[1:5,]
 
@@ -179,7 +193,8 @@ topsongs[1:5,]
 #5                             One Dance 1xznGGDReH1oQq0xzbwXa3         94             Drake 3TVXtAsR1Inumwj472S9r4               Views
                                 </code></pre>
 <p>To get a dataframe with related artists:</p>
-<pre class="r"><code>getRelated(&quot;Regina+spektor&quot;)
+<pre class="r"><code>related&lt;-getRelated(&quot;Regina+spektor&quot;)
+related
 #                 sourceID     sourceName                names popularity followers                        id
 #1  3z6Gk257P9jNcZbBXJNX5i Regina Spektor                Feist         63    336016     6CWTBjOJK75cTE8Xv8u1kj
 #2  3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Kate Nash         57    158098     5vBKu1igxFo6g1sHADkIdg

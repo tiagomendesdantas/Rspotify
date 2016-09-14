@@ -78,12 +78,30 @@ To get the features from a specific song:
 # getting the song features from "Don't Leave Me [Ne Me Quitte Pas]" 
 #from the album "what we saw from the cheap seats" from Regina Spektor
 song<-getFeatures("0y5HWbAnJ6qrjeBuFL52hO",token=keys) #"0y5HWbAnJ6qrjeBuFL52hO" is the id for the album.
-song
 ```
+
+To get the playlists from a specific user:
+```r
+wh.playlist <- getPlaylist("thewhitehouse",token=keys) #playlist from the White House
+wh.playlist
+#id                                                              name       ownerid  tracks
+#1 6ujhXmg8SXjdkdCZ2TchTY            The Bidens' 2016 Summer Playlist thewhitehouse      15
+#2 2Zve7PqFSlGl0ojgGnhFTm   The President's 2016 Summer Playlist: Day thewhitehouse      17
+#3 0BczR7bDaoKvn3MGPxS9Lx The President's 2016 Summer Playlist: Night thewhitehouse      18
+#4 4FDHBIdHPNHCPBqftDc3lk                    Holidays with the Bidens thewhitehouse      17
+#5 4qu9a0vwTMyTPpc2YI1GPw                    Holidays with the Obamas thewhitehouse      14
+#6 3R2DGCLfGdVqqqN6rdQYr5   The First Lady's Day of the Girl Playlist thewhitehouse      20
+#7 4RGLH5YuS6ldp7aCKaTWas        The President's Summer Playlist: Day thewhitehouse      20
+#8 3fAriv8eMWELCwbWrhMKy2      The President's Summer Playlist: Night thewhitehouse      20
+
+
+
+```
+
 
 To get the songs from a specific playlist:
 ```r
-#E.g. getting the songs from "Top 100 tracks currently on Spotify"
+#E.g. getting the songs from "Top 100 tracks currently on Spotify" playlist
 topsongs <- getPlaylistSongs("spotify","4hOKQuZbraPDIfaGbM3lKI",token=keys)
 topsongs[1:5,]
 
@@ -101,7 +119,8 @@ topsongs[1:5,]
 
 To get a dataframe with related artists:
 ```r
-getRelated("Regina+spektor")
+related<-getRelated("Regina+spektor")
+related
 #                 sourceID     sourceName                names popularity followers                        id
 #1  3z6Gk257P9jNcZbBXJNX5i Regina Spektor                Feist         63    336016     6CWTBjOJK75cTE8Xv8u1kj
 #2  3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Kate Nash         57    158098     5vBKu1igxFo6g1sHADkIdg
