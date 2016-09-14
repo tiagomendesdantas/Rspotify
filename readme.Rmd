@@ -24,18 +24,64 @@ keys <- spotifyOAuth("app_id","client_id","client_secret")
 
 To get informarion about a specific user:
 ```r
-getUser("t.mendesdantas",token=keys)
+user <- getUser("t.mendesdantas",token=keys)
+user$display_name # user name
+# [1] "Tiago Dantas"
+user$id
+# [1] "t.mendesdantas" #user id
+user$followers
+# [1] 46
 ```
 
 
 To search for an artist:
 ```r
 searchArtist("Regina+spektor")
+# id                     name             popularity    genres    type      followers
+# 3z6Gk257P9jNcZbBXJNX5i Regina Spektor   67            anti-folk artist    613837
 ```
+
+
+To get information from an artist using the artist id:
+```r
+regina<-getArtist("3z6Gk257P9jNcZbBXJNX5i")
+
+```
+
+To get information the albums available at spotify from an specif artist:
+```r
+regina<-getArtist("3z6Gk257P9jNcZbBXJNX5i")
+regina.album
+```
+
+
+
+
 
 To get a dataframe with related artists:
 ```r
 getRelated("Regina+spektor")
-```
+#                 sourceID     sourceName                names popularity followers                        id
+#1  3z6Gk257P9jNcZbBXJNX5i Regina Spektor                Feist         63    336016     6CWTBjOJK75cTE8Xv8u1kj
+#2  3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Kate Nash         57    158098     5vBKu1igxFo6g1sHADkIdg
+#3  3z6Gk257P9jNcZbBXJNX5i Regina Spektor          Imogen Heap         56    183372     6Xb4ezwoAQC4516kI89nWz
+#4  3z6Gk257P9jNcZbBXJNX5i Regina Spektor          Fiona Apple         59    239789     3g2kUQ6tHLLbmkV7T4GPtL
+#5  3z6Gk257P9jNcZbBXJNX5i Regina Spektor            She & Him         55    234354     3CIRif6ZAedT7kZSPvj2A4
+#6  3z6Gk257P9jNcZbBXJNX5i Regina Spektor    Ingrid Michaelson         68    355511     2vm8GdHyrJh2O2MfbQFYG0
+#7  3z6Gk257P9jNcZbBXJNX5i Regina Spektor        A Fine Frenzy         54    130989     5dTYaRzOn4rXGBLH052EeQ
+#8  3z6Gk257P9jNcZbBXJNX5i Regina Spektor          Anya Marina         44     23523     6xYBLeSMu1AqPsnUzEvx5n
+#9  3z6Gk257P9jNcZbBXJNX5i Regina Spektor     Rachael Yamagata         48     44269     7w0qj2HiAPIeUcoPogvOZ6
+#10 3z6Gk257P9jNcZbBXJNX5i Regina Spektor    Jenny Owen Youngs         44     12299     52mkFCABBeP3KjkWFA4M2H
+#11 3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Yael Naim         57     60798     3cHwmcXlo7XvovQcl5YxlQ
+#12 3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Frou Frou         46     48835     6MUyqmIQ35inLjch0YzIEG
+#13 3z6Gk257P9jNcZbBXJNX5i Regina Spektor the bird and the bee         53     60498     65XA3lk0aG9XejO8y37jjD
+#14 3z6Gk257P9jNcZbBXJNX5i Regina Spektor          The Pierces         48     51210     1ET1wIkDmuCBC80XcTr3Sg
+#15 3z6Gk257P9jNcZbBXJNX5i Regina Spektor       Tegan and Sara         65    274481     5e1BZulIiYWPRm8yogwUYH
+#16 3z6Gk257P9jNcZbBXJNX5i Regina Spektor                Lenka         57     91001     5g3uG8zZZANGT6YOssgjfC
+#17 3z6Gk257P9jNcZbBXJNX5i Regina Spektor          KT Tunstall         59     99006     5zzrJD2jXrE9dZ1AklRFcL
+#18 3z6Gk257P9jNcZbBXJNX5i Regina Spektor     Rufus Wainwright         57    118372     2PfBzriIMRsCXPDtSy9vg8
+#19 3z6Gk257P9jNcZbBXJNX5i Regina Spektor        Laura Marling         59    181458     7B2edU3Q7btJoNsoHCNohM
+#20 3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Cat Power         61    288064     6G7OerKc3eBO9sVkRNopFC
 
+```
 
