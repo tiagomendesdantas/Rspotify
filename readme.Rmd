@@ -22,7 +22,7 @@ keys <- spotifyOAuth("app_id","client_id","client_secret")
 ```
 
 
-To get informarion about a specific user:
+To get information about a specific user:
 ```r
 user <- getUser("t.mendesdantas",token=keys)
 user$display_name # user name
@@ -150,5 +150,5 @@ Another example is to use getFeatures to extract features and play with that. In
 
 Apparently it does! 8 out 11 of her songs would be in the same cluster (cluster on the right). From the 3 "misclassified" 2 were singles ("Don't Leave Me [Ne Me Quitte Pas]" and "All the Rowboats"). So it is not strange to see them in a cluster with the top 20 songs.
 
-Thats it! Hope you find this useful!
+That's it! Hope you find this useful!
 
