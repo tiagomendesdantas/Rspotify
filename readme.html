@@ -157,13 +157,27 @@ regina.albums$name #name of the albums
 # [10] &quot;Soviet Kitsch (U.S. Version)&quot;   
 </code></pre>
 <p>To get the songs from a specific album:</p>
-<pre class="r"><code># getting the songs from the album &quot;what we saw from the cheap seats&quot; from Regina Spektor
-regina.whatwesaw&lt;-getAlbum(&quot;3Etyu2JmgiQTQztLz6RxDX&quot;) #&quot;3Etyu2JmgiQTQztLz6RxDX&quot; is the id for the album.
+<pre class="r"><code># getting the songs from the album &quot;what we saw from the cheap seats&quot;
+#from Regina Spektor
+regina.whatwesaw&lt;-getAlbum(&quot;3Etyu2JmgiQTQztLz6RxDX&quot;) #&quot;3Etyu2JmgiQTQztLz6RxDX&quot; is theid for the album.
 </code></pre>
-<p>To the features from a specific song:</p>
-<pre class="r"><code># getting the song from the album &quot;what we saw from the cheap seats&quot; from Regina Spektor
-regina.whatwesaw&lt;-getAlbum(&quot;3Etyu2JmgiQTQztLz6RxDX&quot;) #&quot;3Etyu2JmgiQTQztLz6RxDX&quot; is the id for the album.
-</code></pre>
+<p>To get the features from a specific song:</p>
+<pre class="r"><code># getting the song features from &quot;Don't Leave Me [Ne Me Quitte Pas]&quot; 
+#from the album &quot;what we saw from the cheap seats&quot; from Regina Spektor
+song&lt;-getFeatures(&quot;0y5HWbAnJ6qrjeBuFL52hO&quot;,token=keys) #&quot;0y5HWbAnJ6qrjeBuFL52hO&quot; is the id for the album.
+song</code></pre>
+<p>To get the songs from a specific playlist:</p>
+<pre class="r"><code>#E.g. getting the songs from &quot;Top 100 tracks currently on Spotify&quot;
+topsongs &lt;- getPlaylistSongs(&quot;spotify&quot;,&quot;4hOKQuZbraPDIfaGbM3lKI&quot;,token=keys)
+topsongs[1:5,]
+
+                                tracks                     id popularity            artist               artistId               album  
+1                                Closer 7BKLCZ1jbUBVqRi2FVlTVw        100  The Chainsmokers 69GGBxA162lTqCwzJG5jLp              Closer
+2 Cold Water (feat. Justin Bieber &amp; MØ) 6DNtNfH8hXkqOX1sjqmI7p         94       Major Lazer 738wLrAtLtCtFOLvQBXOXp          Cold Water 
+3                       Let Me Love You 4pdPtRcBmOSQDlJ3Fk945m         95          DJ Snake 540vIaP2JwjQb9dm3aArA4              Encore
+4                              Heathens 6i0V12jOa3mr6uu4WYhUBr         95 Twenty One Pilots 3YQKmKGau1PzlVlkL1iodx            Heathens
+5                             One Dance 1xznGGDReH1oQq0xzbwXa3         94             Drake 3TVXtAsR1Inumwj472S9r4               Views
+                                </code></pre>
 <p>To get a dataframe with related artists:</p>
 <pre class="r"><code>getRelated(&quot;Regina+spektor&quot;)
 #                 sourceID     sourceName                names popularity followers                        id

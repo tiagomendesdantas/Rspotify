@@ -67,18 +67,34 @@ regina.albums$name #name of the albums
 
 To get the songs from a specific album:
 ```r
-# getting the songs from the album "what we saw from the cheap seats" from Regina Spektor
-regina.whatwesaw<-getAlbum("3Etyu2JmgiQTQztLz6RxDX") #"3Etyu2JmgiQTQztLz6RxDX" is the id for the album.
+# getting the songs from the album "what we saw from the cheap seats"
+#from Regina Spektor
+regina.whatwesaw<-getAlbum("3Etyu2JmgiQTQztLz6RxDX") #"3Etyu2JmgiQTQztLz6RxDX" is theid for the album.
 
 ```
 
-To the features from a specific song:
+To get the features from a specific song:
 ```r
-# getting the song features from "Don't Leave Me [Ne Me Quitte Pas]" from the album "what we saw from the cheap seats" from Regina Spektor
+# getting the song features from "Don't Leave Me [Ne Me Quitte Pas]" 
+#from the album "what we saw from the cheap seats" from Regina Spektor
 song<-getFeatures("0y5HWbAnJ6qrjeBuFL52hO",token=keys) #"0y5HWbAnJ6qrjeBuFL52hO" is the id for the album.
 song
 ```
 
+To get the songs from a specific playlist:
+```r
+#E.g. getting the songs from "Top 100 tracks currently on Spotify"
+topsongs <- getPlaylistSongs("spotify","4hOKQuZbraPDIfaGbM3lKI",token=keys)
+topsongs[1:5,]
+
+                                tracks                     id popularity            artist               artistId               album  
+1                                Closer 7BKLCZ1jbUBVqRi2FVlTVw        100  The Chainsmokers 69GGBxA162lTqCwzJG5jLp              Closer
+2 Cold Water (feat. Justin Bieber & MØ) 6DNtNfH8hXkqOX1sjqmI7p         94       Major Lazer 738wLrAtLtCtFOLvQBXOXp          Cold Water 
+3                       Let Me Love You 4pdPtRcBmOSQDlJ3Fk945m         95          DJ Snake 540vIaP2JwjQb9dm3aArA4              Encore
+4                              Heathens 6i0V12jOa3mr6uu4WYhUBr         95 Twenty One Pilots 3YQKmKGau1PzlVlkL1iodx            Heathens
+5                             One Dance 1xznGGDReH1oQq0xzbwXa3         94             Drake 3TVXtAsR1Inumwj472S9r4               Views
+                                
+```
 
 
 
@@ -109,4 +125,7 @@ getRelated("Regina+spektor")
 #20 3z6Gk257P9jNcZbBXJNX5i Regina Spektor            Cat Power         61    288064     6G7OerKc3eBO9sVkRNopFC
 
 ```
+
+
+
 
