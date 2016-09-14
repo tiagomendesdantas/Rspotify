@@ -22,7 +22,7 @@ getUser<-function(user_id,token){
   json1<-httr::content(req)
   dados=data.frame(display_name=json1$display_name,
                    id=json1$id,
-                   followers=json1$followers$total)
+                   followers=json1$followers$total,stringsAsFactors = F)
   return(dados)
 }
 
