@@ -24,7 +24,7 @@ getFeatures<-function(spotify_ID,token){
                    duration_ms=json1$duration_ms,
                    time_signature=json1$time_signature,
                    uri=json1$uri,
-                   analysis_url=json1$analysis_url)
+                   analysis_url=json1$analysis_url,stringsAsFactors = F)
   return(dados)
 }
 

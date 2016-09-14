@@ -48,10 +48,35 @@ regina<-getArtist("3z6Gk257P9jNcZbBXJNX5i")
 
 ```
 
-To get information the albums available at spotify from an specif artist:
+To get information the albums available at spotify from a specific artist:
 ```r
-regina<-getArtist("3z6Gk257P9jNcZbBXJNX5i")
-regina.album
+regina.albums<-getAlbums("3z6Gk257P9jNcZbBXJNX5i")
+regina.albums$name #name of the albums
+# [1] "Kubo and the Two Strings"                         
+# [2] "What We Saw From The Cheap Seats"                 
+# [3] "What We Saw From The Cheap Seats (Deluxe Version)"
+# [4] "Live In London"                                   
+# [5] "Far"                                              
+# [6] "Far (Deluxe DMD)"                                 
+# [7] "Begin To Hope"                                    
+# [8] "Begin To Hope (Special Edition)"                  
+# [9] "Begin To Hope (U.S. Version)"                     
+# [10] "Soviet Kitsch (U.S. Version)"   
+
+```
+
+To get the songs from a specific album:
+```r
+# getting the songs from the album "what we saw from the cheap seats" from Regina Spektor
+regina.whatwesaw<-getAlbum("3Etyu2JmgiQTQztLz6RxDX") #"3Etyu2JmgiQTQztLz6RxDX" is the id for the album.
+
+```
+
+To the features from a specific song:
+```r
+# getting the song features from "Don't Leave Me [Ne Me Quitte Pas]" from the album "what we saw from the cheap seats" from Regina Spektor
+song<-getFeatures("0y5HWbAnJ6qrjeBuFL52hO",token=keys) #"0y5HWbAnJ6qrjeBuFL52hO" is the id for the album.
+song
 ```
 
 
