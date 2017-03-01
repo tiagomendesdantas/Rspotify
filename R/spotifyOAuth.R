@@ -6,7 +6,7 @@
 #' authenticated calls to the Spotify API. The token can be saved as a
 #' file in disk to be re-used in future sessions. This function relies on the
 #' \code{httr} package to create the OAuth token
-#'@param app_id App ID
+#'@param app_id App ID (this is an internal identification for token if you wish to save authorization)
 #'@param client_id Client ID
 #'@param client_secret Client Secret
 #' @examples \dontrun{
