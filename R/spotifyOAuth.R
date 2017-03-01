@@ -21,7 +21,7 @@
 #'@export
 
 
-spotifyOAuth<-function(app_id="myspotify",client_id,client_secret){
+spotifyOAuth<-function(app_id,client_id,client_secret){
 spotifyR <- httr::oauth_endpoint(
   authorize = "https://accounts.spotify.com/authorize",
   access = "https://accounts.spotify.com/api/token")
