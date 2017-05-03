@@ -1,4 +1,4 @@
-#Rspotify: Access to Spotify API via R
+# Rspotify: Access to Spotify API via R
 
 
 This package allows you to connect R to Spotify's API and get information about Songs, Albums, Artists and Users.
@@ -137,7 +137,7 @@ related
 ```
 
 
-##Nice examples
+## Nice examples
 
 One nice idea is to create networks of related artists. Eg. This is a network of related artists from the top 100 artists at spotify (Basically all you need to do is use getPlaylistSongs and getRelated to get the data).
 
