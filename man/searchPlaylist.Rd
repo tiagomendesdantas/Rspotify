@@ -14,4 +14,3 @@ searchPlaylist(playlistName, offset = 0)
 \description{
 function to search for playlists given a name
 }
-

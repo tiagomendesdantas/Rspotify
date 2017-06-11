@@ -7,18 +7,19 @@
 
 function to get basic info about a searched Artist}
 \usage{
-searchArtist(artistName)
+searchArtist(artistName, token)
 }
 \arguments{
 \item{artistName}{Name of the artist}
+
+\item{token}{An OAuth token created with \code{spotifyOAuth}.}
 }
 \examples{
 \dontrun{
 ## Example
-search<-searchArtist("Foo+fighters")
-
+## my_oauth <- spotifyOAuth(app_id="xxxx",client_id="yyyy",client_secret="zzzz")
+## save(my_oauth, file="my_oauth")
+## load("my_oauth")
+## foofighters <- searchArtist("Foo+fighters",token=my_oauth)
 }
-
-
 }
-

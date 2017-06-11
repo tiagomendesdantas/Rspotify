@@ -15,4 +15,3 @@ get Album from an artist using their ID
 \description{
 Get Spotify catalog information about an album’s tracks.
 }
-

@@ -7,4 +7,4 @@ Maintainer: Tiago Dantas <t.mendesdantas@gmail.com>
 Description: Provides an interface to the Spotify API.
 License: GPL-2
 LazyData: TRUE
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

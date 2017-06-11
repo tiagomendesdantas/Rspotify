@@ -12,4 +12,3 @@ getRelated(artistName)
 \description{
 function to get the related artists of an Artist
 }
-

@@ -14,4 +14,3 @@ getFeatures(spotify_ID, token)
 \description{
 function to get audio feature information for a single track identified by its unique Spotify ID.
 }
-

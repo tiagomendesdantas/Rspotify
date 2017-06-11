@@ -19,4 +19,3 @@ get playlist from a specific user using a username
 \description{
 function to get Info about the playlist of a specific user using a username
 }
-

@@ -7,7 +7,7 @@
 spotifyOAuth(app_id, client_id, client_secret)
 }
 \arguments{
-\item{app_id}{App ID}
+\item{app_id}{App ID (this is an internal identification for token if you wish to save authorization)}
 
 \item{client_id}{Client ID}
 
@@ -30,4 +30,3 @@ file in disk to be re-used in future sessions. This function relies on the
 
 
 }
-

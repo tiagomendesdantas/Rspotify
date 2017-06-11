@@ -25,4 +25,3 @@ function to get basic info of an user
 
 
 }
-

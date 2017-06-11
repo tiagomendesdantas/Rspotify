@@ -24,4 +24,3 @@ foofighters<-getArtist("7jy3rLJdDQY21OgRLCZ9sD")
 
 }
 }
-

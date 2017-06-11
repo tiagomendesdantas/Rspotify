@@ -17,4 +17,3 @@ getAlbums(id, type = "album", market = "US")
 \description{
 function to get albums from an artist using their ID
 }
-

@@ -2,6 +2,8 @@
 % Please edit documentation in R/getArtist.R, R/getArtist2.R, R/getTrack.R
 \name{getArtist}
 \alias{getArtist}
+\alias{getArtist}
+\alias{getArtist}
 \title{Get Spotify catalog information for a single artist}
 \usage{
 getArtist(id)
@@ -49,4 +51,3 @@ foofighters<-getArtist("7jy3rLJdDQY21OgRLCZ9sD")
 }
 
 }
-

@@ -14,4 +14,3 @@ getTop(id, country)
 \description{
 function to get top tracks of an Artist by artist ID and country
 }
-
