@@ -18,8 +18,6 @@
 #note that if you don't provide a specifc name the function will return possible cases that match
 #sorted by popularity
 searchArtist<-function(artistName,token){
-  req<-jsonlite::fromJSON(paste0("https://api.spotify.com/v1/search?q=", gsub(' ', '+', artistName),"&type=artist"))
-
   req <- httr::GET(paste0("https://api.spotify.com/v1/search?q=", gsub(' ', '+', artistName),"&type=artist"), httr::config(token = token))
   json1 <- httr::content(req)
   x<-json1$artists$items
