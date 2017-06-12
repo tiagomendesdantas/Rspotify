@@ -3,6 +3,7 @@
 #'
 #'Function to get Spotify catalog information for a single artist identified by their unique Spotify ID.
 #'@param id The Spotify ID for the artist.
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@return Get Spotify catalog information for a single track identified by its unique Spotify ID.
 #'@export
 #'@examples \dontrun{
@@ -15,12 +16,12 @@
 
 
 
-getArtistinfo<-function(id){
-  req <- httr::GET(paste0("https://api.spotify.com/v1/artists/",id))
+getArtistinfo<-function(id,token){
+  req <- httr::GET(paste0("https://api.spotify.com/v1/artists/",id),httr::config(token = token))
   json1<-httr::content(req)
   dados<-data.frame(id=json1$id,name=json1$name,
                     popularity=json1$popularity,
                     followers=json1$followers$total,
-                    genres=paste(json1$genres,collapse =";"))
+                    genres=paste(json1$genres,collapse =","))
   return(dados)
 }
