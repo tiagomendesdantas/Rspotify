@@ -36,9 +36,7 @@ user$followers
 
 To search for an artist:
 ```r
-searchArtist("Regina+spektor")
-# id                     name             popularity    genres    type      followers
-# 3z6Gk257P9jNcZbBXJNX5i Regina Spektor   67            anti-folk artist    613837
+regina<-searchArtist("Regina+spektor",token=keys)
 ```
 
 
