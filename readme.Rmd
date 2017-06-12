@@ -36,7 +36,7 @@ user$followers
 
 To search for an artist:
 ```r
-regina<-searchArtist("Regina+spektor",token=keys)
+findingregina<-searchArtist("Regina+spektor",token=keys)
 ```
 
 
