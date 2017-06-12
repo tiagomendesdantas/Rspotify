@@ -4,7 +4,7 @@
 \alias{getAlbum}
 \title{Get an Album’s Tracks}
 \usage{
-getAlbum(id)
+getAlbum(id, token)
 }
 \arguments{
 \item{id}{The Spotify ID for the album.}

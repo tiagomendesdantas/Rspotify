@@ -67,7 +67,7 @@ To get the songs from a specific album:
 ```r
 # getting the songs from the album "what we saw from the cheap seats"
 #from Regina Spektor
-regina.whatwesaw<-getAlbum("3Etyu2JmgiQTQztLz6RxDX") #"3Etyu2JmgiQTQztLz6RxDX" is theid for the album.
+regina.whatwesaw<-getAlbum("3Etyu2JmgiQTQztLz6RxDX",token=keys) #"3Etyu2JmgiQTQztLz6RxDX" is the album id.
 
 ```
 
