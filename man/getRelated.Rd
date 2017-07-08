@@ -8,6 +8,7 @@ getRelated(artistName)
 }
 \arguments{
 \item{artistName}{Name of the artist (can use name or Spotify ID of the artist)}
+\item{token}{An OAuth token created with \code{spotifyOAuth}.}
 }
 \description{
 function to get the related artists of an Artist
