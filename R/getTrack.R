@@ -6,8 +6,17 @@
 #'@return 'Get Spotify catalog information for a single track identified by its unique Spotify ID.
 #'@export
 
-getArtist<-function(id){
-  req<-jsonlite::fromJSON(paste0("https://api.spotify.com/v1/tracks/",id))
-  return(data.frame(id=req$id,name=req$name,explicit=req$explicit,popularity=req$popularity,artist=req$artists$name,artistID=req$artists$id,album=req$album$name,albumID=req$album$id))
+getTrack<-function(id, token){
+  req<-httr::content(httr::GET(paste0("https://api.spotify.com/v1/tracks/",id),
+                               httr::config(token = token)))
+  return(data.frame(
+    id=req$id,
+    name=req$name,
+    explicit=req$explicit,
+    popularity=req$popularity,
+    artists = paste(lapply(req$artists, function(x) x$name), collapse = ";"),
+    artists_IDs=paste(lapply(req$artists, function(x) x$id), collapse = ";"),
+    album=req$album$name,
+    albumID=req$album$id))
 }
 

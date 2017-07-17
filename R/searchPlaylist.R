@@ -8,9 +8,16 @@
 
 
 #function to search for playlists given a name
-searchPlaylist<-function(playlistName,offset=0){
-  req<-jsonlite::fromJSON(paste0("https://api.spotify.com/v1/search?q=", gsub(' ', '+', playlistName),"&type=playlist&limit=50&offset=",offset))
+searchPlaylist<-function(playlistName,offset=0, token = token){
+  require(dplyr)
+  req<-httr::content(httr::GET(paste0("https://api.spotify.com/v1/search?q=",
+                                      gsub(" ", "+", playlistName),
+                                      "&type=playlist&limit=50&offset=",offset),
+                               httr::config(token = token)))
   playlist<-req$playlists$items
-  playlist.df<-data.frame(playlist[,c("id","name")],tracks=playlist$tracks$total,ownerid=playlist$owner$id,stringsAsFactors = F)
+  playlist.df<- dplyr::bind_rows(
+    lapply(playlist, function(x) data.frame(
+      id = x$id, name = x$name, tracks = x$tracks$total,
+      owner = x$owner$id, stringsAsFactors = FALSE)))
   return(playlist.df)
 }

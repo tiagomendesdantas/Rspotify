@@ -13,13 +13,15 @@
 #'
 #'}
 #'
-getArtist<-function(id){
-  req <- httr::GET(paste0("https://api.spotify.com/v1/artists/",id))
+getArtist<-function(id, token){
+  req <- httr::GET(paste0("https://api.spotify.com/v1/artists/",id),
+                   httr::config(token = token))
   json1<-httr::content(req)
-  dados<-data.frame(id=json1$id,name=json1$name,
-                   popularity=json1$popularity,
-                   followers=json1$followers$total,
-                   genres=paste(json1$genres,collapse =";"))
+  dados<-data.frame(id=json1$id,
+                    name=json1$name,
+                    popularity=json1$popularity,
+                    followers=json1$followers$total,
+                    genres=paste(json1$genres,collapse =";"))
   return(dados)
 }
 
