@@ -22,7 +22,7 @@ getRelated <-function(artistName, token){
   N <- lapply(N, "[", "total")
 
   relatedArtists <- ldply(M, data.frame)
-  relatedArtists$followers <- ldply(N, data.frame)$total
+  relatedArtists$followers <- dplyr::ldply(N, data.frame)$total
 
   return(relatedArtists)
 }

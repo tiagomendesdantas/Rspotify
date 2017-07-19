@@ -4,7 +4,7 @@
 \alias{getTop}
 \title{Get top tracks of an Artist}
 \usage{
-getTop(id, country)
+getTop(id, country, token)
 }
 \arguments{
 \item{id}{Artist ID}

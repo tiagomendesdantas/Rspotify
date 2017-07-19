@@ -4,7 +4,7 @@
 \alias{searchPlaylist}
 \title{Search for playlists given a name}
 \usage{
-searchPlaylist(playlistName, offset = 0)
+searchPlaylist(playlistName, offset = 0, token = token)
 }
 \arguments{
 \item{playlistName}{Name of the playlist being searched for}

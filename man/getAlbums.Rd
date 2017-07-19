@@ -4,7 +4,7 @@
 \alias{getAlbums}
 \title{Get an Artist’s Albums}
 \usage{
-getAlbums(id, type = "album", market = "US")
+getAlbums(id, type = "album", market = "US", token)
 }
 \arguments{
 \item{id}{The Spotify ID for the artist.}
