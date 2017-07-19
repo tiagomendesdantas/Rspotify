@@ -1,3 +1,4 @@
+#' @title
 #'Get Related artists
 #'
 #'
