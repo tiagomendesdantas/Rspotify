@@ -42,13 +42,13 @@ findingregina<-searchArtist("Regina+spektor",token=keys)
 
 To get information from an artist using the artist id:
 ```r
-regina<-getArtistinfo("3z6Gk257P9jNcZbBXJNX5i")
+regina<-getArtistinfo("3z6Gk257P9jNcZbBXJNX5i",token=keys)
 
 ```
 
 To get information the albums available at spotify from a specific artist:
 ```r
-regina.albums<-getAlbums("3z6Gk257P9jNcZbBXJNX5i")
+regina.albums<-getAlbums("3z6Gk257P9jNcZbBXJNX5i",token=keys)
 regina.albums$name #name of the albums
 # [1] "Kubo and the Two Strings"                         
 # [2] "What We Saw From The Cheap Seats"                 
@@ -108,7 +108,7 @@ topsongs <- getPlaylistSongs("spotify","4hOKQuZbraPDIfaGbM3lKI",token=keys)
 
 To get a dataframe with related artists:
 ```r
-related<-getRelated("Regina+spektor")
+related<-getRelated("Regina+spektor",token=keys)
 related
 #                 sourceID     sourceName                names popularity followers                        id
 #1  3z6Gk257P9jNcZbBXJNX5i Regina Spektor                Feist         63    336016     6CWTBjOJK75cTE8Xv8u1kj

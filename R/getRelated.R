@@ -10,7 +10,7 @@
 #ps:function allows you use the name
 
 getRelated <-function(artistName, token){
-  library(plyr)
+  require(plyr)
   info<-searchArtist(artistName, token = token)
   id<-info$id[1]
   name<-info$display_name[1]
