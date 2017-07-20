@@ -144,7 +144,7 @@ One nice idea is to create networks of related artists. Eg. This is a network of
 
 Another example is to use getFeatures to extract features and play with that. In this example I use getFeatures and getPlaylistSongs to extract song features from the "What we saw from the cheap seats" from Regina Spektor and the song features from the Top 20 songs at spotify (extracted in august 2016). I assume that Reginas' songs are not very similar to the ones that make a lot of success...This is sad because her songs are awesome =( . Then I use Hierarchical cluster to see if Reginas' songs would stay in a different cluster based on its features.
 
-<center><img src="test.jpeg" alt="Regi" style="width: 750px;"/></center>
+<center><img src="examples/test.jpeg" alt="Regi" style="width: 750px;"/></center>
 
 Apparently it does! 8 out 11 of her songs would be in the same cluster (cluster on the right). From the 3 "misclassified" 2 were singles ("Don't Leave Me [Ne Me Quitte Pas]" and "All the Rowboats"). So it is not strange to see them in a cluster with the top 20 songs.
 
