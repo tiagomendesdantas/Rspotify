@@ -80,7 +80,7 @@ song<-getFeatures("0y5HWbAnJ6qrjeBuFL52hO",token=keys) #"0y5HWbAnJ6qrjeBuFL52hO"
 
 To get the playlists from a specific user:
 ```r
-wh.playlist <- getPlaylist("thewhitehouse",token=keys) #playlist from the White House
+wh.playlist <- getPlaylist("obamawhitehouse",token=keys) #playlist from the user obamawhitehouse
 wh.playlist
 #id                                                              name       ownerid  tracks
 #1 6ujhXmg8SXjdkdCZ2TchTY            The Bidens' 2016 Summer Playlist thewhitehouse      15
