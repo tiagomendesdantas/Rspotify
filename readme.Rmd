@@ -139,7 +139,7 @@ related
 
 One nice idea is to create networks of related artists. Eg. This is a network of related artists from the top 100 artists at spotify (Basically all you need to do is use getPlaylistSongs and getRelated to get the data).
 
-<center><img src="Top100songs.jpg" alt="Top 100 network" style="width: 750px;"/></center>
+<center><img src="examples/Top100songs.jpg" alt="Top 100 network" style="width: 750px;"/></center>
 
 
 Another example is to use getFeatures to extract features and play with that. In this example I use getFeatures and getPlaylistSongs to extract song features from the "What we saw from the cheap seats" from Regina Spektor and the song features from the Top 20 songs at spotify (extracted in august 2016). I assume that Reginas' songs are not very similar to the ones that make a lot of success...This is sad because her songs are awesome =( . Then I use Hierarchical cluster to see if Reginas' songs would stay in a different cluster based on its features.
