@@ -22,7 +22,7 @@ getRelated <-function(artistName, token){
   N <- lapply(json1$artists, "[[", "followers")
   N <- lapply(N, "[", "total")
 
-  relatedArtists <- ldply(M, data.frame)
+  relatedArtists <- plyr::ldply(M, data.frame)
   relatedArtists$followers <- plyr::ldply(N, data.frame)$total
 
   return(relatedArtists)
