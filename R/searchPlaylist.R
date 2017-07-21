@@ -9,7 +9,7 @@
 
 #function to search for playlists given a name
 searchPlaylist<-function(playlistName,offset=0, token = token){
-  require(dplyr)
+  #require(dplyr)
   req<-httr::content(httr::GET(paste0("https://api.spotify.com/v1/search?q=",
                                       gsub(" ", "+", playlistName),
                                       "&type=playlist&limit=50&offset=",offset),
