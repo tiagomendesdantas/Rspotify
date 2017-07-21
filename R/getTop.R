@@ -4,6 +4,7 @@
 #'function to get top tracks of an Artist by artist ID and country
 #'@param id Artist ID
 #'@param country Country of interest
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 
 #function to get top tracks by artist ID and country

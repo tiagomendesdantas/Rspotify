@@ -8,4 +8,4 @@ Description: Provides an interface to the Spotify API.
 License: GPL-2
 LazyData: TRUE
 RoxygenNote: 6.0.1
-Imports: plyr,httr
+Imports: plyr,httr,dplyr,jsonlite

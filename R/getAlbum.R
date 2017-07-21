@@ -4,6 +4,7 @@
 #'Get Spotify catalog information about an album’s tracks.
 #'@param id The Spotify ID for the album.
 #'@return get Album from an artist using their ID
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 
 getAlbum<-function(id,token){

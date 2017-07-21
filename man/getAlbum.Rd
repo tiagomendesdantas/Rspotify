@@ -8,6 +8,8 @@ getAlbum(id, token)
 }
 \arguments{
 \item{id}{The Spotify ID for the album.}
+
+\item{token}{An OAuth token created with \code{spotifyOAuth}.}
 }
 \value{
 get Album from an artist using their ID

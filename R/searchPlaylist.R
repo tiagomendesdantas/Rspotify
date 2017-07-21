@@ -4,6 +4,7 @@
 #'function to search for playlists given a name
 #'@param playlistName Name of the playlist being searched for
 #'@param offset The index of the first Playlist to return. Default: 0 (the first object). Maximum offset: 100.000.
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 
 

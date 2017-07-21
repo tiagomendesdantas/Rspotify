@@ -5,6 +5,7 @@
 #'@param id The Spotify ID for the artist.
 #'@param market Optional. An ISO 3166-1 alpha-2 country code. Supply this parameter to limit the response to one particular geographical market. For example, for albums available in Sweden: market=SE.
 #'@return 'Get an Artist’s Albums
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 getAlbums<-function(id,type="album",market="US",token){
   require(dplyr)

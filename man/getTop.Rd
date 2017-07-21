@@ -10,6 +10,8 @@ getTop(id, country, token)
 \item{id}{Artist ID}
 
 \item{country}{Country of interest}
+
+\item{token}{An OAuth token created with \code{spotifyOAuth}.}
 }
 \description{
 function to get top tracks of an Artist by artist ID and country

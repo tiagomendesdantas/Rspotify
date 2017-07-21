@@ -4,6 +4,7 @@
 #'Get Spotify catalog information for a single track identified by its unique Spotify ID.
 #'@param id The Spotify ID for the track.
 #'@return 'Get Spotify catalog information for a single track identified by its unique Spotify ID.
+#'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 
 getTrack<-function(id, token){

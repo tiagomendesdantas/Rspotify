@@ -10,6 +10,8 @@ getAlbums(id, type = "album", market = "US", token)
 \item{id}{The Spotify ID for the artist.}
 
 \item{market}{Optional. An ISO 3166-1 alpha-2 country code. Supply this parameter to limit the response to one particular geographical market. For example, for albums available in Sweden: market=SE.}
+
+\item{token}{An OAuth token created with \code{spotifyOAuth}.}
 }
 \value{
 'Get an Artist’s Albums
