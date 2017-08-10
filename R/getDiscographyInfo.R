@@ -8,7 +8,7 @@
 #'@param token An OAuth token created with \code{spotifyOAuth}.
 #'@export
 getDiscographyInfo <- function(id,token){
-  artist_info <- getAlbums("3z6Gk257P9jNcZbBXJNX5i",token=token)
+  artist_info <- getAlbums(id,token=token)
   ids <- artist_info$id
   df <- data.frame()
   for (i in ids){
