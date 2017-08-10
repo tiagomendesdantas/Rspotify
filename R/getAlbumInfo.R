@@ -1,4 +1,4 @@
-#'Get an additional album info'
+#'Get additional album info
 #'
 #'
 #'function to get additional album info from an artist using their ID
