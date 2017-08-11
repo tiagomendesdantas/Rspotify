@@ -29,7 +29,7 @@ searchTrack<-function(track,token){
   artists <- plyr::ldply(artist.pre, data.frame)$name
   type<-unlist(lapply(x,function(x)x$type))
   dados <- data.frame(display_name, id, popularity,artists,artists_IDs,type, stringsAsFactors = F)
-  return(dados)
+  return(dados[order(-popularity),])
 }
 
 
