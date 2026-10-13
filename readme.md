@@ -1,5 +1,7 @@
 # Rspotify: Access to Spotify API via R
 
+**Status:** not maintained since 2019. Compatibility with the current Spotify Web API has not been verified.
+
 
 This package allows you to connect R to Spotify's API and get information about Songs, Albums, Artists and Users.
 
